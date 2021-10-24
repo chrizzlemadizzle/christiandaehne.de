@@ -1,7 +1,7 @@
 /* andirueckel.css */
 
 @import url("/assets/css/normalize.css");
-@import url("/assets/css/fonts.css");
+/*@import url("/assets/css/fonts.css"); */
 
 :root {
   --color-fg: rgb(0,0,0);
