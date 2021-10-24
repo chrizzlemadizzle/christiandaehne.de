@@ -1,0 +1,162 @@
+/* andirueckel.css */
+
+@import url("/assets/css/normalize.css");
+@import url("/assets/css/fonts.css");
+
+:root {
+  --color-fg: rgb(0,0,0);
+  --color-bg: rgb(255,255,255);
+  --color-hi: rgb(255,13,37);
+  --color-lo: rgb(240,240,240);
+  --margin: 1rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: unset;
+  padding: unset;
+}
+
+*::selection {
+  background-color: var(--color-lo);
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: "EH Normal", sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+body {
+  margin: calc(var(--margin) * 0.6) calc(var(--margin) * 1.4) calc(var(--margin) * 0.6) var(--margin);
+  max-width: 960px;
+  opacity: 0;
+  animation: init 0.03s ease-in 0.5s 1 forwards;
+}
+
+body > * + *::before {
+  content: "\2014";
+}
+
+a:link {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-fg);
+}
+
+a:hover {
+  color: var(--color-fg);
+  text-decoration: underline;
+}
+
+a:focus {
+  color: var(--color-fg);
+}
+
+a:active {
+  color: var(--color-fg);
+}
+
+em, i {
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: unset;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a[rel~="external"]::after {
+  color: var(--color-hi);
+  content: "\2197";
+  display: inline-block;
+  font-size: 0.55rem;
+  margin-left: 0.05rem;
+  margin-right: -0.05rem;
+  vertical-align: super;
+}
+
+/*
+img[alt=""], img:not([alt]) {
+  border: 3px dashed rgb(255,0,0);
+}
+*/
+
+@keyframes init {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fg: rgb(255,255,255);
+    --color-bg: rgb(25,25,25);
+    --color-hi: rgb(230,10,70);
+    --color-lo: rgb(40,40,40);
+  }
+}
+
+/* 319px */
+@media (max-width: 19.938em) {
+  html {
+    font-size: 1em;
+  }
+}
+
+/* 320px */
+@media (min-width: 20em) {
+  html {
+    font-size: 1.15em;
+  }
+}
+
+/* 480px */
+@media (min-width: 30em) {
+  html {
+    font-size: 1.3em;
+  }
+}
+
+/* 640px */
+@media (min-width: 40em) {
+  html {
+    font-size: 1.45em;
+  }
+}
+
+/* 800px */
+@media (min-width: 50em) {
+  html {
+    font-size: 1.6em;
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  html {
+    font-size: 1.9em;
+  }
+}
